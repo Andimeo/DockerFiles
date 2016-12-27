@@ -1,0 +1,8 @@
+#/usr/bin/mysqld_safe > /dev/null 2>&1 & 
+service mysql restart
+service ntp restart  
+mkdir -p /var/run/sshd 
+#/usr/sbin/sshd > /dev/null 2>&1  &
+service ssh restart
+export LC_ALL="C"
+echo "10.220.21.12  artifactory.tango.corp" >> /etc/hosts
